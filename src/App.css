@@ -1,0 +1,91 @@
+/* ---------- Auth Layout ---------- */
+.auth-box {
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-header h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.auth-header p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.error {
+  color: #d22;
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.terms {
+  font-size: 0.75rem;
+  text-align: center;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.toggle-link {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.toggle-link a {
+  color: #4C1D95;
+  text-decoration: underline;
+}
+
+/* ---------- Dashboard ---------- */
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dash-box {
+  width: 80%;
+  max-width: 700px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.dash-header button {
+  margin-left: 1rem;
+  border: none;
+  background: #4C1D95;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 12px;
+  cursor: pointer;
+}

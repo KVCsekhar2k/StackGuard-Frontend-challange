@@ -1,0 +1,20 @@
+.form-button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  margin-top: 0.5rem;
+}
+
+.form-button:hover {
+  opacity: 0.9;
+}
+
+.form-button:active {
+  transform: scale(0.98);
+}
