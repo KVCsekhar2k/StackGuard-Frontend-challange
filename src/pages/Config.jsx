@@ -1,38 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import Layout from "../components/Layout.jsx";
-import Input from "../components/Input.jsx";
-import Button from "../components/Button.jsx";
-import "./Config.css"
+import Layout from "../components/Layout";
+import Button from "../components/Button";
+import "./Config.css";
 
 export default function Config() {
-  const [key, setKey] = useState("");
-  const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (key.length < 100 || key.length > 1000) return setError("Key must be between 100–1000 characters.");
+  const handleVerify = () => {
+    // Instantly set verified config
     localStorage.setItem("stack_config", "true");
     navigate("/dashboard");
   };
 
   return (
-    <Layout leftImage="https://i.pinimg.com/736x/cb/c7/61/cbc761869bdab11c861429f1868fd76b.jpg">
-      <div className="auth-box">
-        <div className="auth-header">
+    <Layout leftImage="https://i.pinimg.com/1200x/25/f3/79/25f3792bb151520d1ae87926e8e6633a.jpg">
+      <div className="config-container">
+        <div className="config-header">
           <img src="https://i.ibb.co/LD6bVgfw/stackguard-logo.jpg" alt="Stackguard logo" className="logo" />
-          <h2>Verify your public key</h2>
-          <p>To get started provide your public key for verification</p>
+          <h2>Welcome, you're almost done!</h2>
+          <p>Click the button below to complete your setup and access your dashboard.</p>
         </div>
 
-        <form onSubmit={handleSubmit}>
-          <Input placeholder="Enter your public key" value={key} onChange={(e) => setKey(e.target.value)} />
-          {error && <p className="error">{error}</p>}
-          <Button text="Verify" color="#4C1D95" />
-        </form>
+        <div className="verify-box">
+          <Button text="Verify Now" color="#4C1D95" onClick={handleVerify} />
+        </div>
 
-        <p className="toggle-link">Don’t have a public key? Contact your administrator.</p>
+        <p className="config-note">
+          This step simulates verification — no public key required for testing.
+        </p>
       </div>
     </Layout>
   );
